@@ -1,14 +1,23 @@
 import './App.css';
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar';
+import Home from './pages';
+import About from './pages/About';
 
 function App() {
   return (
     <Router>
-      <Header />
+
+
+      <Navbar/>
+      <Switch>
+        <Route path='/' exact component={Home}></Route>
+        <Route path='/about' component={About}></Route>
+      </Switch>
       <Route
         path='/'
         exact
