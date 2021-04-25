@@ -1,14 +1,9 @@
 import PropTypes from 'prop-types'
 
-import Header from './Header'
-import Footer from './Footer'
-
 const LandingPage = (props) => {
     return (
-        <>
-            <Header />
+        <>          
             {/* Assemble all your components here */}
-            <Footer />
         </>
     )
 }
